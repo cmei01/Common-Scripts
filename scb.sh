@@ -1,7 +1,7 @@
 #!/bin/bash
 #Find all non-Stopped and 100% done task
 CID=`/usr/bin/transmission-remote -l | grep 100% | grep -v "Stopped" | awk '{print $1}'`
-if [ !$CID ]; 
+if [ -z "$CID" ]; 
 	then echo "No job need to stop. exiting..." ; exit 2; 
 else
 	echo "Below job will be stopped"
