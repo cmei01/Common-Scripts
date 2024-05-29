@@ -1,0 +1,5 @@
+#有些时候iTerm2 zsh下光标会消失。执行这个命令可以找回光标,git-effort runs tput civis to hide the cursor, which, apparently is working. Then it runs tput cvvis to reveal the cursor.
+$ tput civis
+# cursor should be hidden
+$ tput cvvis
+# cursor should be visible
